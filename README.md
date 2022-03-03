@@ -1,4 +1,5 @@
 # 🔥KeepAlivePerfect
+
 KeepAlivePerfect是通过JNI复活进程的基础上，实现了通过ioctl复活进程，能最大程度提高复活率。
 
 - `master` 分支是`利用 libbinder.so 与 ActivityManagerService 通信`的版本
