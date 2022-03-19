@@ -15,7 +15,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-import me.weishu.reflection.Reflection;
 
 /**
  * Doc说明 (此类核心功能):
@@ -53,7 +52,11 @@ public class KeepAlive {
     public static void init(Context base, KeepAliveConfigs configurations) {
         Reflection.unseal(base);
         client = new KeepAlive(configurations);
-        client.initDaemon(base);
+        try {
+            client.initDaemon(base);
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
     }
 
 
